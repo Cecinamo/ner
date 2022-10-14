@@ -1,0 +1,2165 @@
+{
+  "name": "ner",
+  "id": "ner",
+  "description": "",
+  "created_on": "14/09/2022, 07:18:23",
+  "last_modify": "12/10/2022, 15:52:10",
+  "graphs": {
+    "main": {
+      "nodes": [
+        {
+          "id": "d917725d-a08f-4acd-ac1c-5cab8e3ec888",
+          "position": {
+            "x": 112.07589003480325,
+            "y": 497.6852209359731
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Trigger",
+            "events": null,
+            "description": "### Description\nThe TRIGGER component is used to start streams.\n\n### Output\nThe parameter Type can be set as a **String** or an **Object**. The parameter Value, on the other hand, defines the actual output of the component.",
+            "inputs": [],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "type",
+                  "type": "select",
+                  "description": "The type of data",
+                  "label": "Type",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": [
+                    "String",
+                    "Object"
+                  ],
+                  "value": null
+                },
+                {
+                  "name": "value",
+                  "type": "dynamic",
+                  "dynamicType": {
+                    "String": "area",
+                    "Object": "code"
+                  },
+                  "parent": "type",
+                  "label": "Value",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiPlayFill",
+              "values": {
+                "comment": "",
+                "alias": "EXPORT",
+                "debug": false,
+                "type": "String",
+                "value": "Hello world!"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 112.07589003480325,
+            "y": 497.6852209359731
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "982073e0-c976-4ccc-8b21-11869fe7d8c4",
+          "position": {
+            "x": 110.77826685985923,
+            "y": 280.3171406746686
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 104,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Trigger",
+            "events": null,
+            "description": "### Description\nThe TRIGGER component is used to start streams.\n\n### Output\nThe parameter Type can be set as a **String** or an **Object**. The parameter Value, on the other hand, defines the actual output of the component.",
+            "inputs": [],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "type",
+                  "type": "select",
+                  "description": "The type of data",
+                  "label": "Type",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": [
+                    "String",
+                    "Object"
+                  ],
+                  "value": null
+                },
+                {
+                  "name": "value",
+                  "type": "dynamic",
+                  "dynamicType": {
+                    "String": "area",
+                    "Object": "code"
+                  },
+                  "parent": "type",
+                  "label": "Value",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiPlayFill",
+              "values": {
+                "comment": "",
+                "alias": "DELETE",
+                "debug": false,
+                "type": "String",
+                "value": "Hello world!"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 110.77826685985923,
+            "y": 280.3171406746686
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "37dfb722-12d4-4e8e-9736-e0be1bbe50b0",
+          "position": {
+            "x": 109.73146924017428,
+            "y": 171.0075116778076
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 104,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Trigger",
+            "events": null,
+            "description": "### Description\nThe TRIGGER component is used to start streams.\n\n### Output\nThe parameter Type can be set as a **String** or an **Object**. The parameter Value, on the other hand, defines the actual output of the component.",
+            "inputs": [],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "type",
+                  "type": "select",
+                  "description": "The type of data",
+                  "label": "Type",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": [
+                    "String",
+                    "Object"
+                  ],
+                  "value": null
+                },
+                {
+                  "name": "value",
+                  "type": "dynamic",
+                  "dynamicType": {
+                    "String": "area",
+                    "Object": "code"
+                  },
+                  "parent": "type",
+                  "label": "Value",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiPlayFill",
+              "values": {
+                "comment": "",
+                "alias": "INFO",
+                "debug": false,
+                "type": "String",
+                "value": "Hello world!"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 109.73146924017428,
+            "y": 171.0075116778076
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "7932324d-ac65-44e1-a7f1-b22cccd705a9",
+          "position": {
+            "x": 106.25493738069062,
+            "y": 64.08640677091832
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 104,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Trigger",
+            "events": null,
+            "description": "### Description\nThe TRIGGER component is used to start streams.\n\n### Output\nThe parameter Type can be set as a **String** or an **Object**. The parameter Value, on the other hand, defines the actual output of the component.",
+            "inputs": [],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "type",
+                  "type": "select",
+                  "description": "The type of data",
+                  "label": "Type",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": [
+                    "String",
+                    "Object"
+                  ],
+                  "value": null
+                },
+                {
+                  "name": "value",
+                  "type": "dynamic",
+                  "dynamicType": {
+                    "String": "area",
+                    "Object": "code"
+                  },
+                  "parent": "type",
+                  "label": "Value",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiPlayFill",
+              "values": {
+                "comment": "",
+                "alias": "CREATE HF",
+                "debug": false,
+                "type": "Object",
+                "value": "dict(typology='trainable_hf',\n     code='dbmdz/bert-base-italian-xxl-uncased',\n     dropout_rate=.1,\n     p=.01,\n     lang='it',\n     extend_pretrained=True,\n     n_iter=20,\n     minibatch_size=2,\n     max_len=256,\n     training_args=dict(do_eval=True, evaluation_strategy='steps'))"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 106.25493738069062,
+            "y": 64.08640677091832
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "cf8fd6f4-2edc-4325-bc9d-a794e6d1b86b",
+          "position": {
+            "x": 113.07589003480325,
+            "y": 388.05772030241303
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 104,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "File Reader",
+            "events": null,
+            "description": "### Description\nThe FILE READER component allows the reading of individual files.\n\n### Output\nSetting the **Read Content** parameter to **False**, the output provides the file path in PosixPath format. The component will then need to be connected to other components to read the content, for example *LineReader*.\n\nOn the contrary, setting the **Read Content** parameter to **True**, you can choose whether to read the content in *Binary* format. This format will be selected for reading non-text files.",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Inputs",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "value",
+                  "type": "files",
+                  "label": "File",
+                  "fragment": "files",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                },
+                {
+                  "name": "read_content",
+                  "type": "boolean",
+                  "label": "Read content"
+                },
+                {
+                  "name": "binary",
+                  "type": "dynamic",
+                  "label": "Binary",
+                  "dynamicType": {
+                    "true": "boolean"
+                  },
+                  "parent": "read_content"
+                }
+              ],
+              "click": "Send file",
+              "icon": "RiFileList3Fill",
+              "values": {
+                "comment": "",
+                "alias": "IMPORT",
+                "debug": false,
+                "read_content": false,
+                "value": {
+                  "name": "ce.zip",
+                  "path": "data/data/entities/ce.zip",
+                  "parent": "data/data/entities",
+                  "isDir": false,
+                  "hidden": false
+                }
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 113.07589003480325,
+            "y": 388.05772030241303
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "6ba29215-40ba-43e6-b38f-9ab940c4396e",
+          "position": {
+            "x": 1274.4844580788795,
+            "y": 104.8215636467005
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 104,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Trigger",
+            "events": null,
+            "description": "### Description\nThe TRIGGER component is used to start streams.\n\n### Output\nThe parameter Type can be set as a **String** or an **Object**. The parameter Value, on the other hand, defines the actual output of the component.",
+            "inputs": [],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "type",
+                  "type": "select",
+                  "description": "The type of data",
+                  "label": "Type",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": [
+                    "String",
+                    "Object"
+                  ],
+                  "value": null
+                },
+                {
+                  "name": "value",
+                  "type": "dynamic",
+                  "dynamicType": {
+                    "String": "area",
+                    "Object": "code"
+                  },
+                  "parent": "type",
+                  "label": "Value",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiPlayFill",
+              "values": {
+                "comment": "",
+                "alias": "FIT",
+                "debug": false,
+                "type": "Object",
+                "value": "[\n  {\"text\": \"Uber blew through $1 million a week\", \"entities\": [[0, 4, \"ORG\"]]},\n  {\"text\": \"Android Pay expands to Canada\", \"entities\": [[0, 11, \"PRODUCT\"], [23, 30, \"GPE\"]]},\n  {\"text\": \"Spotify steps up Asia expansion\", \"entities\": [[0, 8, \"ORG\"], [17, 21, \"LOC\"]]}\n        ]"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 1274.4844580788795,
+            "y": 104.8215636467005
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "08bfeb88-1f7f-4517-8fbf-cf3dba066f20",
+          "position": {
+            "x": 628.6364482661984,
+            "y": 183.36967833602904
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 156,
+          "height": 72,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Function",
+            "events": null,
+            "description": "### Description\nThe FUNCTION component is used to apply Python code to the input component's. The input can be retrieved using the variable *data*.\n\nTo be able to use data from components of type FUNCTION that are not linked together, the object is set repository.\n\n```python\nrepository.set('value', 5) - this sets the variable value to 5.\nrepository.get('value') - in this way the variable is called value and the value 5 is returned.\n```\n\n### Input\nThe input is used by the component using the variable **data**.\n\n### Output\nThe output coincides with the return of the code defined when the component was created.",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "propagate",
+                  "type": "boolean",
+                  "label": "Flush at the end"
+                },
+                {
+                  "name": "notify_warnings",
+                  "type": "boolean",
+                  "label": "Notify warnings"
+                },
+                {
+                  "name": "code",
+                  "type": "code",
+                  "description": "A python function that processes the incoming message. \nVariables available are:\n- **data**: the incoming message\n",
+                  "label": "Code",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": null,
+                  "value": null
+                }
+              ],
+              "click": null,
+              "icon": "RiCodeSSlashFill",
+              "values": {
+                "comment": "",
+                "alias": "Encode file",
+                "debug": true,
+                "propagate": true,
+                "notify_warnings": true,
+                "code": "body = data.get('body').encode('cp037')\npath=f'data/data/entities/{data.get(\"fname\")}'\nreturn Parameters(data=body, path=path)"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 628.6364482661984,
+            "y": 183.36967833602904
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "25e6de8f-3413-44eb-8f9e-b1d6d157688a",
+          "position": {
+            "x": 850.0758900348033,
+            "y": 202.82698021762008
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "File Writer",
+            "events": null,
+            "description": "### Description\nThe FILE WRITER component allows you to write files. The **Append** parameter allows you to write a file using multiple inputs. The destination path of the file can be defined when creating the block or passed as input in the previous block. In this way you have the possibility to write multiple files using one block.\n\n### Input\nUsing the parameter **Save as**, the format of the data to be received as input is defined. The available formats are: *text*, *bytes* and *json*. To define the destination path of the file instead, the input is defined as:\n```python\nParameters(data = data, path = filename)\n```\n\n### Output\nThe output confirms that the file has been written with the string: **Written to filename**.",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input",
+                "closed": false
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Outputs",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "path",
+                  "type": "text",
+                  "label": "Path"
+                },
+                {
+                  "name": "type",
+                  "label": "Save as",
+                  "type": "select",
+                  "options": [
+                    "text",
+                    "bytes",
+                    "json"
+                  ],
+                  "validation": {
+                    "required": "Required field"
+                  }
+                },
+                {
+                  "name": "append",
+                  "label": "Append",
+                  "type": "dynamic",
+                  "dynamicType": "boolean",
+                  "condition": "[\"text\", \"bytes\"].includes({parent})",
+                  "parent": "type"
+                },
+                {
+                  "name": "overwrite",
+                  "type": "dynamic",
+                  "dynamicType": {
+                    "true": "boolean"
+                  },
+                  "parent": "append",
+                  "label": "Overwrite"
+                }
+              ],
+              "click": null,
+              "icon": "RiFileEditFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "path": "",
+                "type": "bytes",
+                "append": false
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 850.0758900348033,
+            "y": 202.82698021762008
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "77074899-f250-44ef-904c-5026674ab6b4",
+          "position": {
+            "x": 1273.0170429250416,
+            "y": 232.7431534060704
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Trigger",
+            "events": null,
+            "description": "### Description\nThe TRIGGER component is used to start streams.\n\n### Output\nThe parameter Type can be set as a **String** or an **Object**. The parameter Value, on the other hand, defines the actual output of the component.",
+            "inputs": [],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "type",
+                  "type": "select",
+                  "description": "The type of data",
+                  "label": "Type",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": [
+                    "String",
+                    "Object"
+                  ],
+                  "value": null
+                },
+                {
+                  "name": "value",
+                  "type": "dynamic",
+                  "dynamicType": {
+                    "String": "area",
+                    "Object": "code"
+                  },
+                  "parent": "type",
+                  "label": "Value",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiPlayFill",
+              "values": {
+                "comment": "",
+                "alias": "PREDICT",
+                "debug": false,
+                "type": "Object",
+                "value": "# dict(text='Spotify steps up Asia expansion')\ndict(text='Mario Rossi nato il 10 gennaio 1980, codice fiscale RSSMRA80A10H501W, partita iva 86334519757 con veicolo targato BB 000 HH, ha pagato 200.89 euro. Contatti: mariorossi@email.com, tel 3338899047, iban  IT 60 X 0542811101000000123456.')"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 1273.0170429250416,
+            "y": 232.7431534060704
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "54107001-77b4-4934-8c4f-1b62d571cebe",
+          "position": {
+            "x": 1230.1864415654047,
+            "y": 85.55115043592053
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 907,
+          "height": 408,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "NER",
+            "fill": "#577590",
+            "height": 408,
+            "width": 907
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "__class__": "Node"
+        },
+        {
+          "id": "a368fb02-dd7b-4cfd-b9ff-13c2c4368eaf",
+          "position": {
+            "x": 1274.0284580788796,
+            "y": 369.10956364670045
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 104,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Trigger",
+            "events": null,
+            "description": "### Description\nThe TRIGGER component is used to start streams.\n\n### Output\nThe parameter Type can be set as a **String** or an **Object**. The parameter Value, on the other hand, defines the actual output of the component.",
+            "inputs": [],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "type",
+                  "type": "select",
+                  "description": "The type of data",
+                  "label": "Type",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": [
+                    "String",
+                    "Object"
+                  ],
+                  "value": null
+                },
+                {
+                  "name": "value",
+                  "type": "dynamic",
+                  "dynamicType": {
+                    "String": "area",
+                    "Object": "code"
+                  },
+                  "parent": "type",
+                  "label": "Value",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiPlayFill",
+              "values": {
+                "comment": "",
+                "alias": "EVALUATE",
+                "debug": false,
+                "type": "Object",
+                "value": "[\n  {\"text\": \"Uber blew through $1 million a week\", \"entities\": [[0, 4, \"ORG\"]]},\n  {\"text\": \"Android Pay expands to Canada\", \"entities\": [[0, 11, \"PRODUCT\"], [23, 30, \"GPE\"]]},\n  {\"text\": \"Spotify steps up Asia expansion\", \"entities\": [[0, 8, \"ORG\"], [17, 21, \"LOC\"]]}\n        ]"
+              }
+            },
+            "locked": null,
+            "status": "Model saved"
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 1274.0284580788796,
+            "y": 369.10956364670045
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "941bccfc-4a48-4375-87c6-34e823959f59",
+          "position": {
+            "x": 370.12823489392065,
+            "y": 153.95466029485593
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 181,
+          "height": 100,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "NER Management",
+            "events": null,
+            "description": "",
+            "inputs": [
+              {
+                "id": "create",
+                "label": "create",
+                "service": "create",
+                "to": "create"
+              },
+              {
+                "id": "info",
+                "label": "info",
+                "service": "info",
+                "to": "info"
+              },
+              {
+                "id": "delete",
+                "label": "delete",
+                "service": "delete",
+                "to": "delete"
+              },
+              {
+                "id": "import",
+                "label": "import",
+                "service": "import",
+                "to": "import"
+              },
+              {
+                "id": "export",
+                "label": "export",
+                "service": "export",
+                "to": "export"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "create",
+                "label": "create"
+              },
+              {
+                "id": "info",
+                "label": "info"
+              },
+              {
+                "id": "delete",
+                "label": "delete"
+              },
+              {
+                "id": "import",
+                "label": "import"
+              },
+              {
+                "id": "export",
+                "label": "export"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "AI",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "create_new",
+                  "type": "boolean",
+                  "label": "Create New",
+                  "helper": "",
+                  "group": "",
+                  "value": false,
+                  "description": "",
+                  "validation": null
+                },
+                {
+                  "name": "new_model_name",
+                  "type": "dynamic",
+                  "label": "Model Name",
+                  "helper": "",
+                  "group": "",
+                  "value": null,
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "parent": "create_new",
+                  "condition": "{parent}",
+                  "dynamicType": "text",
+                  "options": null,
+                  "url": null
+                },
+                {
+                  "name": "model_name",
+                  "type": "dynamic",
+                  "label": "Model Name",
+                  "helper": "",
+                  "group": "",
+                  "value": null,
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "parent": "create_new",
+                  "condition": "!{parent}",
+                  "dynamicType": "asyncSelect",
+                  "options": null,
+                  "url": "http://localhost:9999/routes/ner/extractors"
+                }
+              ],
+              "click": null,
+              "icon": "RiToolsFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "create_new": true,
+                "new_model_name": "spacy_ner"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 370.12823489392065,
+            "y": 153.95466029485593
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "e463ee19-7afc-42c3-b738-ea3be3dc9ded",
+          "position": {
+            "x": 1639,
+            "y": 229
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 60,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "NER",
+            "events": {
+              "type": "ner",
+              "field": "model_name"
+            },
+            "description": "tante cose",
+            "inputs": [
+              {
+                "id": "fit",
+                "label": "fit",
+                "service": "fit",
+                "to": "fit"
+              },
+              {
+                "id": "extract",
+                "label": "extract",
+                "service": "extract",
+                "to": "extract"
+              },
+              {
+                "id": "evaluate",
+                "label": "evaluate",
+                "service": "evaluate",
+                "to": "evaluate"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "fit",
+                "label": "fit"
+              },
+              {
+                "id": "extract",
+                "label": "extract"
+              },
+              {
+                "id": "evaluate",
+                "label": "evaluate"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "AI",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "model_name",
+                  "type": "asyncSelect",
+                  "label": "Model Name",
+                  "helper": "",
+                  "group": "",
+                  "value": "it_core_news_lg",
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "url": "http://localhost:9999/routes/ner/extractors"
+                }
+              ],
+              "click": null,
+              "icon": "RiFileTextLine",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "model_name": "rules"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 1639,
+            "y": 229
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "3f83dd26-1cb0-4470-afd8-b169e3785662",
+          "position": {
+            "x": 1925,
+            "y": 258
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 156,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "File Writer",
+            "events": null,
+            "description": "### Description\nThe FILE WRITER component allows you to write files. The **Append** parameter allows you to write a file using multiple inputs. The destination path of the file can be defined when creating the block or passed as input in the previous block. In this way you have the possibility to write multiple files using one block.\n\n### Input\nUsing the parameter **Save as**, the format of the data to be received as input is defined. The available formats are: *text*, *bytes* and *json*. To define the destination path of the file instead, the input is defined as:\n```python\nParameters(data = data, path = filename)\n```\n\n### Output\nThe output confirms that the file has been written with the string: **Written to filename**.",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Outputs",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "path",
+                  "type": "text",
+                  "label": "Path"
+                },
+                {
+                  "name": "type",
+                  "label": "Save as",
+                  "type": "select",
+                  "options": [
+                    "text",
+                    "bytes",
+                    "json"
+                  ],
+                  "validation": {
+                    "required": "Required field"
+                  }
+                },
+                {
+                  "name": "append",
+                  "label": "Append",
+                  "type": "dynamic",
+                  "dynamicType": "boolean",
+                  "condition": "[\"text\", \"bytes\"].includes({parent})",
+                  "parent": "type"
+                },
+                {
+                  "name": "overwrite",
+                  "type": "dynamic",
+                  "dynamicType": {
+                    "true": "boolean"
+                  },
+                  "parent": "append",
+                  "label": "Overwrite"
+                }
+              ],
+              "click": null,
+              "icon": "RiFileEditFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "path": "data/data/entities/ciccio.eval",
+                "type": "json"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 1925,
+            "y": 258
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "efa9558c-670a-4627-8a4f-c526e8592225",
+          "position": {
+            "x": 97.01999999999984,
+            "y": 691.7199999999999
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "File Reader",
+            "events": null,
+            "description": "### Description\nThe FILE READER component allows the reading of individual files.\n\n### Output\nSetting the **Read Content** parameter to **False**, the output provides the file path in PosixPath format. The component will then need to be connected to other components to read the content, for example *LineReader*.\n\nOn the contrary, setting the **Read Content** parameter to **True**, you can choose whether to read the content in *Binary* format. This format will be selected for reading non-text files.",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Inputs",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "value",
+                  "type": "files",
+                  "label": "File",
+                  "fragment": "files",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                },
+                {
+                  "name": "read_content",
+                  "type": "boolean",
+                  "label": "Read content"
+                },
+                {
+                  "name": "binary",
+                  "type": "dynamic",
+                  "label": "Binary",
+                  "dynamicType": {
+                    "true": "boolean"
+                  },
+                  "parent": "read_content"
+                }
+              ],
+              "click": "Send file",
+              "icon": "RiFileList3Fill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": false,
+                "read_content": true,
+                "value": {
+                  "name": "cartesio_prova_train.json",
+                  "path": "data/data/entities/cartesio_prova_train.json",
+                  "parent": "data/data/entities",
+                  "isDir": false,
+                  "hidden": false
+                },
+                "binary": false
+              }
+            },
+            "status": "EPOCH: 5/15 - loss: 194.687",
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 97.01999999999984,
+            "y": 691.7199999999999
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "09200458-f546-4193-a303-102e93eb1728",
+          "position": {
+            "x": 324.5399999999998,
+            "y": 675.88
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Function",
+            "events": null,
+            "description": "### Description\nThe FUNCTION component is used to apply Python code to the input component's. The input can be retrieved using the variable *data*.\n\nTo be able to use data from components of type FUNCTION that are not linked together, the object is set repository.\n\n```python\nrepository.set('value', 5) - this sets the variable value to 5.\nrepository.get('value') - in this way the variable is called value and the value 5 is returned.\n```\n\n### Input\nThe input is used by the component using the variable **data**.\n\n### Output\nThe output coincides with the return of the code defined when the component was created.",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "propagate",
+                  "type": "boolean",
+                  "label": "Flush at the end"
+                },
+                {
+                  "name": "notify_warnings",
+                  "type": "boolean",
+                  "label": "Notify warnings"
+                },
+                {
+                  "name": "code",
+                  "type": "code",
+                  "description": "A python function that processes the incoming message. \nVariables available are:\n- **data**: the incoming message\n",
+                  "label": "Code",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": null,
+                  "value": null
+                }
+              ],
+              "click": null,
+              "icon": "RiCodeSSlashFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "propagate": true,
+                "notify_warnings": true,
+                "code": "import re\nimport json\n\ndata = json.loads(data)['train_set']\n\nfor row in data:\n    text = row['text']\n    ents = []\n    for si,ei,tag in row['entities']:\n        if len(text)==ei or re.search('[ /W]', text[ei]):\n            ents.append([si,ei,tag])\n    row['entities'] = ents\n\nreturn data"
+              }
+            },
+            "locked": null,
+            "status": "EPOCH: 8/15 - loss: 136.168"
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 324.5399999999998,
+            "y": 675.88
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "695310fb-7392-4454-a83f-cb03b4e36043",
+          "position": {
+            "x": 544.8599999999999,
+            "y": 671.5600000000001
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "NER",
+            "events": {
+              "type": "ner",
+              "field": "model_name"
+            },
+            "description": "tante cose",
+            "inputs": [
+              {
+                "id": "fit",
+                "label": "fit",
+                "service": "fit",
+                "to": "fit"
+              },
+              {
+                "id": "extract",
+                "label": "extract",
+                "service": "extract",
+                "to": "extract"
+              },
+              {
+                "id": "evaluate",
+                "label": "evaluate",
+                "service": "evaluate",
+                "to": "evaluate"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "fit",
+                "label": "fit"
+              },
+              {
+                "id": "extract",
+                "label": "extract"
+              },
+              {
+                "id": "evaluate",
+                "label": "evaluate"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "AI",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "model_name",
+                  "type": "asyncSelect",
+                  "label": "Model Name",
+                  "helper": "",
+                  "group": "",
+                  "value": "it_core_news_lg",
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "url": "http://localhost:9999/routes/ner/extractors"
+                }
+              ],
+              "click": null,
+              "icon": "RiFileTextLine",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "model_name": "spacy_ner"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 544.8599999999999,
+            "y": 671.5600000000001
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "1a014b33-ccc3-4bb8-934d-fc584118586b",
+          "position": {
+            "x": 97.49477264922078,
+            "y": -49.22581264490617
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Trigger",
+            "events": null,
+            "description": "### Description\nThe TRIGGER component is used to start streams.\n\n### Output\nThe parameter Type can be set as a **String** or an **Object**. The parameter Value, on the other hand, defines the actual output of the component.",
+            "inputs": [],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "type",
+                  "type": "select",
+                  "description": "The type of data",
+                  "label": "Type",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": [
+                    "String",
+                    "Object"
+                  ],
+                  "value": null
+                },
+                {
+                  "name": "value",
+                  "type": "dynamic",
+                  "dynamicType": {
+                    "String": "area",
+                    "Object": "code"
+                  },
+                  "parent": "type",
+                  "label": "Value",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiPlayFill",
+              "values": {
+                "comment": "",
+                "alias": "CREATE SPACY",
+                "debug": false,
+                "type": "Object",
+                "value": "dict(typology='trainable_spacy',\n             lang='it',\n             extend_pretrained=False,\n             n_iter=15,\n             minibatch_size=500,\n             dropout_rate=0.2)"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 97.49477264922078,
+            "y": -49.22581264490617
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "d10c832c-1179-450b-b712-c6861239c570",
+          "position": {
+            "x": 64.54558917052057,
+            "y": -87.81564934064622
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 974,
+          "height": 705,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "Model Management",
+            "fill": "#F74B65",
+            "height": 705,
+            "width": 974
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "__class__": "Node"
+        },
+        {
+          "id": "bfcc5132-f596-4c9d-b6ba-46af0c61a415",
+          "position": {
+            "x": 809.2725295763437,
+            "y": 655.4947735007262
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 156,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "File Writer",
+            "events": null,
+            "description": "### Description\nThe FILE WRITER component allows you to write files. The **Append** parameter allows you to write a file using multiple inputs. The destination path of the file can be defined when creating the block or passed as input in the previous block. In this way you have the possibility to write multiple files using one block.\n\n### Input\nUsing the parameter **Save as**, the format of the data to be received as input is defined. The available formats are: *text*, *bytes* and *json*. To define the destination path of the file instead, the input is defined as:\n```python\nParameters(data = data, path = filename)\n```\n\n### Output\nThe output confirms that the file has been written with the string: **Written to filename**.",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Outputs",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "path",
+                  "type": "text",
+                  "label": "Path"
+                },
+                {
+                  "name": "type",
+                  "label": "Save as",
+                  "type": "select",
+                  "options": [
+                    "text",
+                    "bytes",
+                    "json"
+                  ],
+                  "validation": {
+                    "required": "Required field"
+                  }
+                },
+                {
+                  "name": "append",
+                  "label": "Append",
+                  "type": "dynamic",
+                  "dynamicType": "boolean",
+                  "condition": "[\"text\", \"bytes\"].includes({parent})",
+                  "parent": "type"
+                },
+                {
+                  "name": "overwrite",
+                  "type": "dynamic",
+                  "dynamicType": {
+                    "true": "boolean"
+                  },
+                  "parent": "append",
+                  "label": "Overwrite"
+                }
+              ],
+              "click": null,
+              "icon": "RiFileEditFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "path": "data/data/entities/spacy_ner.eval",
+                "type": "json"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 809.2725295763437,
+            "y": 655.4947735007262
+          },
+          "__class__": "Node"
+        }
+      ],
+      "edges": [
+        {
+          "id": "reactflow__edge-08bfeb88-1f7f-4517-8fbf-cf3dba066f20output-25e6de8f-3413-44eb-8f9e-b1d6d157688ainput",
+          "source": "08bfeb88-1f7f-4517-8fbf-cf3dba066f20",
+          "sourceHandle": "output",
+          "target": "25e6de8f-3413-44eb-8f9e-b1d6d157688a",
+          "targetHandle": "input",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#56DCB9"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-d917725d-a08f-4acd-ac1c-5cab8e3ec888output-941bccfc-4a48-4375-87c6-34e823959f59export",
+          "source": "d917725d-a08f-4acd-ac1c-5cab8e3ec888",
+          "sourceHandle": "output",
+          "target": "941bccfc-4a48-4375-87c6-34e823959f59",
+          "targetHandle": "export",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#888"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-cf8fd6f4-2edc-4325-bc9d-a794e6d1b86boutput-941bccfc-4a48-4375-87c6-34e823959f59import",
+          "source": "cf8fd6f4-2edc-4325-bc9d-a794e6d1b86b",
+          "sourceHandle": "output",
+          "target": "941bccfc-4a48-4375-87c6-34e823959f59",
+          "targetHandle": "import",
+          "data": {
+            "startColor": "#F8637A",
+            "stopColor": "#888"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-982073e0-c976-4ccc-8b21-11869fe7d8c4output-941bccfc-4a48-4375-87c6-34e823959f59delete",
+          "source": "982073e0-c976-4ccc-8b21-11869fe7d8c4",
+          "sourceHandle": "output",
+          "target": "941bccfc-4a48-4375-87c6-34e823959f59",
+          "targetHandle": "delete",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#888"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-37dfb722-12d4-4e8e-9736-e0be1bbe50b0output-941bccfc-4a48-4375-87c6-34e823959f59info",
+          "source": "37dfb722-12d4-4e8e-9736-e0be1bbe50b0",
+          "sourceHandle": "output",
+          "target": "941bccfc-4a48-4375-87c6-34e823959f59",
+          "targetHandle": "info",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#888"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-7932324d-ac65-44e1-a7f1-b22cccd705a9output-941bccfc-4a48-4375-87c6-34e823959f59create",
+          "source": "7932324d-ac65-44e1-a7f1-b22cccd705a9",
+          "sourceHandle": "output",
+          "target": "941bccfc-4a48-4375-87c6-34e823959f59",
+          "targetHandle": "create",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#888"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-941bccfc-4a48-4375-87c6-34e823959f59export-08bfeb88-1f7f-4517-8fbf-cf3dba066f20input",
+          "source": "941bccfc-4a48-4375-87c6-34e823959f59",
+          "sourceHandle": "export",
+          "target": "08bfeb88-1f7f-4517-8fbf-cf3dba066f20",
+          "targetHandle": "input",
+          "data": {
+            "startColor": "#888",
+            "stopColor": "#D770AD"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-6ba29215-40ba-43e6-b38f-9ab940c4396eoutput-e463ee19-7afc-42c3-b738-ea3be3dc9dedfit",
+          "source": "6ba29215-40ba-43e6-b38f-9ab940c4396e",
+          "sourceHandle": "output",
+          "target": "e463ee19-7afc-42c3-b738-ea3be3dc9ded",
+          "targetHandle": "fit",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#888"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-77074899-f250-44ef-904c-5026674ab6b4output-e463ee19-7afc-42c3-b738-ea3be3dc9dedextract",
+          "source": "77074899-f250-44ef-904c-5026674ab6b4",
+          "sourceHandle": "output",
+          "target": "e463ee19-7afc-42c3-b738-ea3be3dc9ded",
+          "targetHandle": "extract",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#888"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-a368fb02-dd7b-4cfd-b9ff-13c2c4368eafoutput-e463ee19-7afc-42c3-b738-ea3be3dc9dedevaluate",
+          "source": "a368fb02-dd7b-4cfd-b9ff-13c2c4368eaf",
+          "sourceHandle": "output",
+          "target": "e463ee19-7afc-42c3-b738-ea3be3dc9ded",
+          "targetHandle": "evaluate",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#888"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-e463ee19-7afc-42c3-b738-ea3be3dc9dedevaluate-3f83dd26-1cb0-4470-afd8-b169e3785662input",
+          "source": "e463ee19-7afc-42c3-b738-ea3be3dc9ded",
+          "sourceHandle": "evaluate",
+          "target": "3f83dd26-1cb0-4470-afd8-b169e3785662",
+          "targetHandle": "input",
+          "data": {
+            "startColor": "#888",
+            "stopColor": "#56DCB9"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-efa9558c-670a-4627-8a4f-c526e8592225output-09200458-f546-4193-a303-102e93eb1728input",
+          "source": "efa9558c-670a-4627-8a4f-c526e8592225",
+          "sourceHandle": "output",
+          "target": "09200458-f546-4193-a303-102e93eb1728",
+          "targetHandle": "input",
+          "data": {
+            "startColor": "#F8637A",
+            "stopColor": "#D770AD"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-1a014b33-ccc3-4bb8-934d-fc584118586boutput-941bccfc-4a48-4375-87c6-34e823959f59create",
+          "source": "1a014b33-ccc3-4bb8-934d-fc584118586b",
+          "sourceHandle": "output",
+          "target": "941bccfc-4a48-4375-87c6-34e823959f59",
+          "targetHandle": "create",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#888"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-09200458-f546-4193-a303-102e93eb1728output-695310fb-7392-4454-a83f-cb03b4e36043evaluate",
+          "source": "09200458-f546-4193-a303-102e93eb1728",
+          "sourceHandle": "output",
+          "target": "695310fb-7392-4454-a83f-cb03b4e36043",
+          "targetHandle": "evaluate",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#888"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-695310fb-7392-4454-a83f-cb03b4e36043evaluate-bfcc5132-f596-4c9d-b6ba-46af0c61a415input",
+          "source": "695310fb-7392-4454-a83f-cb03b4e36043",
+          "sourceHandle": "evaluate",
+          "target": "bfcc5132-f596-4c9d-b6ba-46af0c61a415",
+          "targetHandle": "input",
+          "data": {
+            "startColor": "#888",
+            "stopColor": "#56DCB9"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        }
+      ],
+      "__class__": "Graph"
+    }
+  },
+  "open": [
+    "main"
+  ],
+  "active": "main",
+  "version": "1.0.0",
+  "__class__": "Project"
+}
