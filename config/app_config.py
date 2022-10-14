@@ -31,7 +31,7 @@ S3_ACCESS_KEY = os.environ.get('S3_ACCESS_KEY')
 
 S3_SECRET_ACCESS_KEY = os.environ.get('S3_SECRET_ACCESS_KEY')
 
-S3_BUCKET = os.environ.get('S3_BUCKET') or 'ds4biz-entity-extractor'
+S3_BUCKET = os.environ.get('S3_BUCKET')
 
 AWS_REGION = os.environ.get('AWS_REGION') or 'eu-south-1'
 ###########################################################################
