@@ -37,55 +37,18 @@ def evaluate(ner_model, examples, spacy_model, pretty=True):
         # print('PREDICTED')
         # print([(el.text, el.i, el.pos_, el.ent_type_, el.ent_iob_) for el in pred])
         y_pred += [el.ent_type_ or 'O' for el in predictions]
+    distro = dict(Counter(y_true))
+    labels = sorted(distro.keys())
     cr = classification_report(y_true,y_pred, output_dict=True)
-    cm = confusion_matrix(y_true,y_pred).tolist()
-    distro = dict(hist=Counter(y_true))
-    dt = datetime.strptime(ner_model.date_of_creation, '%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%d %H:%M:%S.%f')
-    if not pretty:
-        return dict(tdist=distro, report_test=dict(classification_report=cr, confusion_matrix=cm),
-                    datetime=dt, task='classification')
-    if pretty:
-        labels = sorted(distro['hist'].keys())
-        cr = pretty_classification_report(cr)
-        metrics = cr['metrics']
-        cr = pretty_cr(cr['classification_report'])
-        cm = pretty_confusion_matrix(cm, labels=labels)
-
-        return dict(tdist=distro, cv_scores=None, datetime=date_converter(dt), task='classification',
-                    test_report=dict(classification_report=cr, confusion_matrix=cm, metrics=metrics),
-                    report_split=None)
-
-def perc_converter(n):
-    if not isinstance(n, (int, float)):
-        return n
-    else:
-        return round(n*100)
-
-def pretty_cr(cr):
+    metrics = dict(accuracy=round(cr['accuracy'],2))
+    del cr['accuracy']
+    cr = [dict(dict(label=k), **v) for k,v in cr.items()]
     exc = ['label', 'support']
-    return [dict((k+' (%)',perc_converter(v)) if k not in exc else (k,v) for k,v in row.items()) for row in cr]
+    cr = [dict((k + ' (%)', round(v*100)) if k not in exc else (k, v) for k, v in row.items()) for row in cr]
+    cm = dict(labels=labels, values=confusion_matrix(y_true,y_pred).tolist())
 
-def pretty_classification_report(cr, **kwargs):
-    if not cr:
-        return {'classification_report': None, 'metrics': None}
-    metrics = {}
-    clf_rep = []
-    for k,v in cr.items():
-        if isinstance(v, float):
-            metrics.update({k:v})
-        else:
-            row = dict(label = k)
-            row.update(v)
-            clf_rep.append(row)
-    return {'classification_report': clf_rep, 'metrics': metrics}
-
-def pretty_confusion_matrix(cm, labels, **kwargs):
-    return dict(values=cm, labels=labels)
-
-def date_converter(dt, format='%Y-%m-%d %H:%M:%S.%f'):
-    dt = datetime.strptime(dt, format)
-    dt = dt.timestamp() * 1000
-    return dt
+    return dict(distro=distro,
+                test_report=dict(classification_report=cr, confusion_matrix=cm, metrics=metrics))
 
 
 if __name__ == '__main__':
@@ -105,4 +68,4 @@ if __name__ == '__main__':
     spacy_model = LANG_CODE_MAP[extractor.lang]
     # print(data)
     results = evaluate(extractor, data, spacy_model)
-    pprint(results)
+    print(results)

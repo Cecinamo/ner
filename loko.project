@@ -3,7 +3,7 @@
   "id": "ner",
   "description": "",
   "created_on": "14/09/2022, 07:18:23",
-  "last_modify": "12/10/2022, 15:52:10",
+  "last_modify": "15/10/2022, 09:56:42",
   "graphs": {
     "main": {
       "nodes": [
@@ -1170,7 +1170,8 @@
                 "new_model_name": "spacy_ner"
               }
             },
-            "locked": null
+            "locked": null,
+            "status": "Model saved"
           },
           "selectable": true,
           "draggable": true,
@@ -1277,7 +1278,7 @@
                 "comment": "",
                 "alias": "",
                 "debug": true,
-                "model_name": "rules"
+                "model_name": "spacy_ner"
               }
             },
             "locked": null
@@ -1697,7 +1698,7 @@
                 "comment": "",
                 "alias": "",
                 "debug": true,
-                "model_name": "spacy_ner"
+                "model_name": "hf_ner"
               }
             },
             "locked": null
@@ -1926,7 +1927,7 @@
                 "comment": "",
                 "alias": "",
                 "debug": true,
-                "path": "data/data/entities/spacy_ner.eval",
+                "path": "data/data/entities/hf_ner.eval",
                 "type": "json"
               }
             },

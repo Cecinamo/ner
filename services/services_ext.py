@@ -482,6 +482,8 @@ async def evaluate_ner(value, args):
                                  status_code=400)
     spacy_model = LANG_CODE_MAP[extractor_model.lang]
     eval = evaluate(extractor_model, value, spacy_model)
+    info = NER_DAO.load_blueprint(identifier=name)
+    eval['info'] = info
     return sanic.json(eval)
 
 

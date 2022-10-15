@@ -1,5 +1,4 @@
-import { useColorModeValue } from '@chakra-ui/react';
-import { HeatMapDatum, HeatMapSvgProps, ResponsiveHeatMap } from '@nivo/heatmap';
+import { ResponsiveHeatMap } from '@nivo/heatmap';
 import { getAxisTooltip } from './constants';
 
 
@@ -8,15 +7,35 @@ export function Heatmap({ data, labels, xLegend, yLegend, ...rest }: HeatmapProp
   const cm = [];
   data.forEach((row, i) => {
         const data_tmp = [];
+        let tot = row.reduce((r, col) => r=r+col, 0);
         row.forEach((col, j) => {
-            data_tmp[j] = {"x": labels[j], "y": col};
+            data_tmp[j] = {"x": labels[j], "y": col/tot, "value": col};
         });
         cm[i] = {"id": labels[i], "data": data_tmp};
         });
 
   const theme = {
-      fontSize: '14px',
-      textColor: '#A9A9A9'
+      fontSize: '12px',
+      textColor: '#A9A9A9',
+      axis: {
+        ticks: {
+          text: {
+            fontSize: '12px'
+          }
+        },
+        legend: {
+          text: {
+            fontSize: '14px'
+          }
+        },
+      },
+      tooltip: {
+        container: {
+          background: "#ffffff",
+          color: "#333333",
+          fontsize: "12px",
+        }
+      }
     };
 
   return (
@@ -27,11 +46,13 @@ export function Heatmap({ data, labels, xLegend, yLegend, ...rest }: HeatmapProp
         borderRadius={"10"}
         borderWidth={"8"}
         borderColor="#222222"
+        label={d => `${d.data.value}`}
+        colorBy='id'
         margin={{
-          top: 10,
+          top: 15,
           right: 10,
-          bottom: 80,
-          left: 50
+          bottom: 120,
+          left: 5
         }}
         colors={{
             type: 'sequential',
@@ -42,8 +63,8 @@ export function Heatmap({ data, labels, xLegend, yLegend, ...rest }: HeatmapProp
             tickSize: 0,
             tickPadding: 5,
             tickRotation: -45,
-            legend: 'Predicted',
-            legendOffset: 50,
+            legend: 'PREDICTED',
+            legendOffset: 80,
             legendPosition: 'middle',
             format: (v) => getAxisTooltip(v),
         }}
@@ -51,9 +72,9 @@ export function Heatmap({ data, labels, xLegend, yLegend, ...rest }: HeatmapProp
             tickSize: 0,
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'True',
+            legend: 'TRUE',
             legendPosition: 'middle',
-            legendOffset: -50,
+            legendOffset: -100,
             format: (v) => getAxisTooltip(v),
         }}
         animate={true}
