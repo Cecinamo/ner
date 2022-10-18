@@ -28,7 +28,6 @@ def evaluate(ner_model, examples, spacy_model, pretty=True):
         annot = [NamedEntity(start,end,tag).__dict__ for start,end,tag in row['entities']]
         pred = [ne.__dict__ for ne in ner_model(text=input_)]
         doc = nlp(input_)
-
         annotations = _add_entities(doc, annot)
         predictions = _add_entities(doc, pred)
         # print('REFERENCE:')
@@ -38,7 +37,7 @@ def evaluate(ner_model, examples, spacy_model, pretty=True):
         # print([(el.text, el.i, el.pos_, el.ent_type_, el.ent_iob_) for el in pred])
         y_pred += [el.ent_type_ or 'O' for el in predictions]
     distro = dict(Counter(y_true))
-    labels = sorted(distro.keys())
+    labels = sorted(set(y_true).union(y_pred))
     cr = classification_report(y_true,y_pred, output_dict=True)
     metrics = dict(accuracy=round(cr['accuracy'],2))
     del cr['accuracy']
@@ -59,8 +58,8 @@ if __name__ == '__main__':
 
     data = [
               {"text": "Uber blew through $1 million a week", "entities": [[0, 4, "ORG"]]},
-              {"text": "Android Pay expands to Canada", "entities": [[0, 11, "PRODUCT"], [23, 30, "GPE"]]},
-              {"text": "Spotify steps up Asia expansion", "entities": [[0, 8, "ORG"], [17, 21, "LOC"]]}
+              {"text": "Android Pay expands to Canada", "entities": [[0, 11, "PRODUCT"], [23, 29, "GPE"]]},
+              {"text": "Spotify steps up Asia expansion", "entities": [[0, 7, "ORG"], [17, 21, "LOC"]]}
         ]
 
     ner_dao = NERDao(dir_path='../../resources/')

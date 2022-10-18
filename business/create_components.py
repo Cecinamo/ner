@@ -1,4 +1,6 @@
-from utils.loko_extensions.model.components import Arg, Component, save_extensions, Input, Output, Dynamic, AsyncSelect
+from doc.doc import entities_doc
+from utils.loko_extensions.model.components import Arg, Component, save_extensions, Input, Output, Dynamic, AsyncSelect, \
+    Select
 
 create_input = Input(id='create', service='create', to='create')
 create_output = Output(id='create')
@@ -38,7 +40,13 @@ model_name = AsyncSelect(name='model_name', label='Model Name',
                          required=True,
                          value='it_core_news_lg')
 
-entities_args = [model_name]
+tokenizer = Select(name='tokenizer', label='Spacy tokenizer',
+                   options=['it_core_news_sm', 'en_core_web_sm', 'en_core_web_md', 'it_core_news_lg'],
+                   required=False,
+                   value='it_core_news_lg',
+                   group='Evaluate configuration')
+
+entities_args = [model_name, tokenizer]
 
 fit_input = Input(id='fit', label='fit', service='fit', to='fit')
 fit_output = Output(id='fit', label='fit')
@@ -49,7 +57,7 @@ extract_output = Output(id='extract', label='extract')
 evaluate_input = Input(id='evaluate', label='evaluate', service='evaluate', to='evaluate')
 evaluate_output = Output(id='evaluate', label='evaluate')
 
-entities = Component(name='NER', description='tante cose', group='AI', args=entities_args,
+entities = Component(name='NER', description=entities_doc, group='AI', args=entities_args,
                      inputs=[fit_input, extract_input, evaluate_input], outputs=[fit_output, extract_output, evaluate_output],
                      icon='RiFileTextLine', events=dict(type="ner", field="model_name"))
 

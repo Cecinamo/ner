@@ -9,10 +9,12 @@ export function Heatmap({ data, labels, xLegend, yLegend, ...rest }: HeatmapProp
         const data_tmp = [];
         let tot = row.reduce((r, col) => r=r+col, 0);
         row.forEach((col, j) => {
-            data_tmp[j] = {"x": labels[j], "y": col/tot, "value": col};
+            data_tmp[j] = {"x": labels[j], "y": (col>0) ? (col/tot) : (col), "value": col};
         });
         cm[i] = {"id": labels[i], "data": data_tmp};
         });
+  
+  console.log(cm);
 
   const theme = {
       fontSize: '12px',

@@ -380,8 +380,8 @@ async def download(value, args):
     body = {
               "value": [
                     {"text": "Uber blew through $1 million a week", "entities": [[0, 4, "ORG"]]},
-                    {"text": "Android Pay expands to Canada", "entities": [[0, 11, "PRODUCT"], [23, 30, "GPE"]]},
-                    {"text": "Spotify steps up Asia expansion", "entities": [[0, 8, "ORG"], [17, 21, "LOC"]]}
+                    {"text": "Android Pay expands to Canada", "entities": [[0, 11, "PRODUCT"], [23, 29, "GPE"]]},
+                    {"text": "Spotify steps up Asia expansion", "entities": [[0, 7, "ORG"], [17, 21, "LOC"]]}
             ],
               "args": {
                 "model_name": "prova"
@@ -445,7 +445,7 @@ async def run_ner(value, args):
                                  status_code=400)
     named_entites = extractor_model(text=req.text)
     output = [ne.__dict__ for ne in named_entites]
-    return sanic.json(output)
+    return sanic.json(dict(entities=output))
 
 
 @bp.post('/evaluate')
@@ -457,8 +457,8 @@ async def run_ner(value, args):
     body = {
               "value": [
                     {"text": "Uber blew through $1 million a week", "entities": [[0, 4, "ORG"]]},
-                    {"text": "Android Pay expands to Canada", "entities": [[0, 11, "PRODUCT"], [23, 30, "GPE"]]},
-                    {"text": "Spotify steps up Asia expansion", "entities": [[0, 8, "ORG"], [17, 21, "LOC"]]}
+                    {"text": "Android Pay expands to Canada", "entities": [[0, 11, "PRODUCT"], [23, 29, "GPE"]]},
+                    {"text": "Spotify steps up Asia expansion", "entities": [[0, 7, "ORG"], [17, 21, "LOC"]]}
             ],
               "args": {
                 "model_name": "prova"
@@ -469,6 +469,7 @@ async def run_ner(value, args):
 @extract_value_args()
 async def evaluate_ner(value, args):
     name = args.get('model_name')
+    tokenizer = args.get('tokenizer')
     if name not in NER_DAO.get_all():
         raise SanicException(f'Extractor "{name}" does not exist!', status_code=400)
     if name in fitting.all('alive'):
@@ -480,8 +481,9 @@ async def evaluate_ner(value, args):
         if not extractor_model.is_trained:
             raise SanicException("It's not possible to extract entities from text with an untrained extractor!",
                                  status_code=400)
-    spacy_model = LANG_CODE_MAP[extractor_model.lang]
-    eval = evaluate(extractor_model, value, spacy_model)
+    if not tokenizer:
+        tokenizer = LANG_CODE_MAP[extractor_model.lang]
+    eval = evaluate(extractor_model, value, tokenizer)
     info = NER_DAO.load_blueprint(identifier=name)
     eval['info'] = info
     return sanic.json(eval)
