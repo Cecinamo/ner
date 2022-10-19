@@ -13,3 +13,11 @@ You can `create`, `delete`, `import`, `export` or make a `copy` of you models di
 In the **Loko project**, you can also find an example of how to manage this operations directly in the flow:
 
 <p align="center"><img src="https://user-images.githubusercontent.com/30443495/196625608-a0ce2672-ed55-40b1-9f55-a0a7f147e66b.png" width="60%" /></p>
+
+And how to `fit`, `predict` and `evaluate` models:
+
+<p align="center"><img src="https://user-images.githubusercontent.com/30443495/196649093-96035795-0395-4b68-b274-b6c4e36f8c8e.png" width="60%" /></p>
+
+Finally, if you save the evaluate output using the ".eval" extension, you can visualize it into the **NER GUI** clicking on Report:
+
+<p align="center"><img src="https://user-images.githubusercontent.com/30443495/196654722-0d1a9252-57d9-4491-8516-bfd8bf0c7959.png" width="60%" /></p>
